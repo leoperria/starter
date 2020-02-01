@@ -3,24 +3,42 @@
     "target": "es6",
     "outDir": "dist",
     "module": "commonjs",
+    "pretty": true,
     "moduleResolution": "node",
     "incremental": true,
+    "sourceMap": true,
+    "alwaysStrict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
-    "noImplicitReturns": false,
+    "noImplicitReturns": true,
     "noImplicitThis": true,
-    "sourceMap": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "strictNullChecks": true,
     "preserveConstEnums": true,
-    "jsx": "react",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "suppressImplicitAnyIndexErrors": true,
-    "strictNullChecks": true,
     "types": [
       "reflect-metadata"
     ],
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "lib": [
+      "es5",
+      "es6",
+      "dom",
+      "es2015.core",
+      "es2015.collection",
+      "es2015.generator",
+      "es2015.iterable",
+      "es2015.promise",
+      "es2015.proxy",
+      "es2015.reflect",
+      "es2015.symbol",
+      "es2015.symbol.wellknown",
+      "esnext.asynciterable"
+    ],
     "paths": {
       "*": [
         "node_modules/*"
@@ -29,5 +47,8 @@
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
