@@ -22,7 +22,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "types": [
       "reflect-metadata",
-      "jest"
+      "jest",
+      "node"
     ],
     "baseUrl": ".",
     "lib": [
