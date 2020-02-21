@@ -4,9 +4,20 @@ import { buildSchema } from "graphql";
 
 // Construct a schema, using GraphQL schema language
 const schema = buildSchema(`
-  type Query {
-    hello: String
-  }
+    input BookInput {
+        title: String
+    }
+    
+    type Book {
+        id: ID!
+        title: String
+    }
+    
+    type Query {
+        allBooks: [Book]!
+        getBook(id: ID!): Book
+    }
+
 `);
 
 // The root provides a resolver function for each API endpoint
